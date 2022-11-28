@@ -1,2 +1,1 @@
-# alx-higher_level_programming
-My Python repository and everything you need to know about my future progress
+I'm writing my first Hello World in python
