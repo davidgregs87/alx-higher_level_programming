@@ -1,1 +1,1 @@
-I'm writing my first Hello World in python
+This is my repository for my python projects and my future progress.
