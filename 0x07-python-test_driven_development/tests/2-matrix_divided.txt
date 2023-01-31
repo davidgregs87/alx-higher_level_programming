@@ -1,0 +1,79 @@
+===================================
+ Testing module 2-matrix_divided.py
+===================================
+
+``matrix_divided(matrix, div)`` returns a new matrix that
+divides all elements by an input value.
+
+Numbers
+=======
+
+First, Import module and function
+
+       >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+Integers and floats.
+
+	>>> matrix_divided([[1, 2, 3],[4, 5, 6]], 2)
+        [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+	>>> matrix_divided([[1]], 2)
+        [[0.5]]
+
+	>>> matrix_divided([[1, 2, 3],[4, 5, 6]], 3.14)
+        [[0.32, 0.64, 0.96], [1.27, 1.59, 1.91]]
+
+	>>> matrix_divided([[1.5, 2.4, 3.1], [4.3, 5.0, 6.8]], 2)
+    	[[0.75, 1.2, 1.55], [2.15, 2.5, 3.4]]
+
+Negatives.
+
+	>>> matrix_divided([[1.5, -2.4, 3.1], [4.3, 5.0, -6.8]], 2)
+    	[[0.75, -1.2, 1.55], [2.15, 2.5, -3.4]]
+
+Division By Zero
+
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+	Traceback (most recent call last):
+	...
+	ZeroDivisionError: division by zero
+
+Infinite
+
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], float("inf"))
+	[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+Invalid Arguments
+
+	matrix = [[1, 2, 3],[4, 5, 6]]
+	>>> matrix_divided([[1, 2, 3],[4, 5, 6]], 'a')
+	Traceback (most recent call last):
+		  ...
+	TypeError: div must be a number
+
+	>>> matrix_divided([[1, 2, 3],[4, 5, 6]], "hello")
+	Traceback (most recent call last):
+		  ...
+	TypeError: div must be a number
+
+	>>> matrix_divided([[1, 2, 3],[4, 5, 6]], [1, 3, 4])
+	Traceback (most recent call last):
+		  ...
+	TypeError: div must be a number
+
+	>>> matrix_divided([[1, 2, 3],[4, 5, 6]], ('tup', 2))
+	Traceback (most recent call last):
+		  ...
+	TypeError: div must be a number
+
+	>>> matrix_divided(0, [[1, 2, 3],[4, 5, 6]])
+	Traceback (most recent call last):
+	    ...
+	TypeError: div must be a number
+
+	>>> matrix_divided([[1, 2, 3],[4, 5, 6]], [[1, 2, 3],[4, 5, 6]])
+	Traceback (most recent call last):
+	    ...
+	TypeError: div must be a number
+
+		

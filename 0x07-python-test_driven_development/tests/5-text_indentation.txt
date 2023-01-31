@@ -1,0 +1,58 @@
+===============================
+ Testing module 5-text_identation.py
+===============================
+
+``text_identation(text)`` prints a text with 2 new lines after each of
+these characters: ., ? and :, text must be a string, otherwise raise
+a TypeError exception
+
+Correct usage
+=============
+
+First, Import module and function
+
+       >>> text_indentation = __import__("5-text_indentation").text_indentation
+
+First String
+
+       >>> text_indentation("Hello. are you here? these are types: Ints.")
+       Hello.
+       <BLANKLINE>
+       are you here?
+       <BLANKLINE>
+       these are types:
+       <BLANKLINE>
+       Ints.
+       <BLANKLINE>
+
+
+       >>> text_indentation("Hello. : \nI am a string? .\n")
+       Hello.
+       <BLANKLINE>
+       :
+       <BLANKLINE>
+       <BLANKLINE>
+       I am a string?
+       <BLANKLINE>
+       .
+       <BLANKLINE>
+       <BLANKLINE>
+
+
+With Errors
+===========
+
+       >>> text_indentation(4)
+       Traceback (most recent call last):
+       ...
+       TypeError: text must be a string
+
+       >>> text_indentation(None)
+       Traceback (most recent call last):
+       ...
+       TypeError: text must be a string
+
+       >>> text_indentation(-4)
+       Traceback (most recent call last):
+       ...
+       TypeError: text must be a string
