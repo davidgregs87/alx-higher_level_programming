@@ -1,0 +1,83 @@
+===============================
+ Testing module 1-my_list.py
+===============================
+
+``print_sorted(self)`` prints the list, but sorted (ascending sort)
+You can assume that all the elements of the list will be of type int
+
+Initial
+=======
+
+First, Import module and function
+
+       >>> MyList = __import__('1-my_list').MyList
+
+Create Instance
+
+       >>> my_list = MyList()
+
+List functions
+==============
+
+Type
+
+	>>> type(my_list)
+	<class '1-my_list.MyList'>
+
+	>>> type(my_list) == MyList
+    	True
+
+Print
+
+	>>> print(my_list)
+	[]
+
+Instance
+
+	>>> isinstance(my_list, MyList)
+	True
+
+	>>> isinstance(my_list, list)
+	True
+
+Subclass
+
+	>>> issubclass(MyList, list)
+    	True
+
+Validate methods
+================
+
+	>>> l2 = MyList(my_list)
+	>>> l2 = [3, 7, 0, 1, 6]
+     	>>> l2.print_sorted()
+     	Traceback (most recent call last):
+     	AttributeError: 'list' object has no attribute 'print_sorted'
+
+Numbers
+=======
+
+	>>> my_list.print_sorted()
+	[]
+
+	>>> my_list.append(1)
+	>>> my_list.append(4)
+	>>> my_list.append(2)
+	>>> my_list.append(3)
+	>>> my_list.append(5)
+	>>> print(my_list)
+	[1, 4, 2, 3, 5]
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
+
+	>>> my_list
+	[1, 4, 2, 3, 5]
+
+Negative Numbers
+
+     	>>> my_list.append(-1)
+     	>>> my_list.append(-4)
+     	>>> my_list += [-8]
+     	>>> my_list.append(-5)
+     	>>> my_list.print_sorted()
+     	[-8, -5, -4, -1, 1, 2, 3, 4, 5]
