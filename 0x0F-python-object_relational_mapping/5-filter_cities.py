@@ -25,7 +25,7 @@ if __name__ == '__main__':
     cur.execute(query, (value,))
     result = cur.fetchall()
     # Iterate through "query"
-    result_strings = [f"'{row[0]}'" for row in result]
+    result_strings = [str(row[0]) for row in result]
     print(", ".join(result_strings))
     cur.close()
     conn.close()
