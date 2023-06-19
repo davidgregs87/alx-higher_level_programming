@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Accessing a database(connection) and make a query
+
+"""
 import MySQLdb
 import sys
 
