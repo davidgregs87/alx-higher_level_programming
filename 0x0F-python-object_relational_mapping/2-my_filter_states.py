@@ -15,7 +15,7 @@ if __name__ == '__main__':
                            user=uname, passwd=password,
                            db=database, port=3306, charset='utf8')
     cur = conn.cursor()
-    cur.execute("""SELECT * FROM states WHERE name='{}'
+    cur.execute("""SELECT * FROM states WHERE BINARY name='{}'
                 ORDER BY id ASC""".format(value,))
     query = cur.fetchall()
     for row in query:
