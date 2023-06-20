@@ -24,10 +24,10 @@ if __name__ == '__main__':
     # Let's now begin query
 
     info = session.query(State).filter(State.name == (sys.argv[4],))
-    for x in info:
-        if not (x):
-            print('Not found')
-        else:
+    if not (info.first()):
+        print('Not found')
+    else:
+        for x in info:
             print('{}'.format(x.id))
 
     # Session closed
