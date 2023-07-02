@@ -15,4 +15,4 @@ if __name__ == '__main__':
         r = req.json()
         print("{}".format(r.get('id')))
     else:
-        print("Failed to retrieve your information!")
+        print("None")
